@@ -20,7 +20,7 @@ class Routing
         $path = realpath(dirname(__FILE__) . "/../../application/controllers/" . $this->current_route[0] . ".php");
         if(!file_exists($path))
         {
-            echo "404 - file not exist";
+            echo "404 - file not exist!!!";
             exit;
         }
         require_once($path);        
@@ -39,17 +39,15 @@ class Routing
             
             else
             {
-                echo "404 - parameter Error!";
+                echo "404 - parameter Error!!!";
             }
         }
         else
         {
-            echo "404 - method not found!";
+            echo "404 - method not exist!!!";
         }
 
     }
-
-
 
 }
 
