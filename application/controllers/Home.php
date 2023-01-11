@@ -2,11 +2,12 @@
 
 namespace Application\Controllers;
 
-class Home 
+class Home extends Controller
 {
     public function index()
     {
-        echo "hi";
+        $productName = "phone";
+        $this->view('app.index' , compact('productName'));
     }
     public function create()
     {
