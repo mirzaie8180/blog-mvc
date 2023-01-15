@@ -1,4 +1,4 @@
-
+<?php $this->include("panel.layouts.header"); ?>
 
                 <section class="mb-2 d-flex justify-content-between align-items-center">
                     <h2 class="h4">Categories</h2>
@@ -38,4 +38,4 @@
                     </table>
                 </section>
 
-
+                <?php $this->include("panel.layouts.footer"); ?>
