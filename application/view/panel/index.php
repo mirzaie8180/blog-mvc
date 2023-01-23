@@ -1,5 +1,4 @@
 <?php $this->include("panel.layouts.header"); ?>
-
                 <section style="min-height: 80vh;" class="d-flex justify-content-center align-items-center">
                     <section>
                         <h1>MVC Tutorial</h1>
@@ -10,5 +9,4 @@
                         </ul>
                     </section>
                 </section>
-
-                <?php $this->include("panel.layouts.footer"); ?>
+<?php $this->include("panel.layouts.footer"); ?>

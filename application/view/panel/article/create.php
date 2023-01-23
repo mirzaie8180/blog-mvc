@@ -9,8 +9,9 @@
         <label for="cat_id">Category</label>
         <select class="form-control" id="cat_id" name="cat_id">
             <?php foreach ($categories as $category) { ?>
-                <option value="<?= $category['id'] ?>"><?= $category['name'] ?></option>
+                <option value="<?php echo $category['id'] ?>"><?php echo $category['name'] ?></option>
             <?php } ?>
+
         </select>
     </section>
     <section class="form-group">

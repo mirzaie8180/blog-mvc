@@ -10,12 +10,12 @@ class Category extends Controller
     {
         $category = new CategoryModel();
         $categories = $category->all();
-        return $this->View('panel.category.index', compact('categories'));
+        return $this->view('panel.category.index', compact('categories'));
     }
 
     public function create()
     {
-        return $this->View('panel.category.create');
+        return $this->view('panel.category.create');
     }
 
     public function store()
@@ -27,7 +27,7 @@ class Category extends Controller
 
     public function show($id)
     {
-        return $this->View('panel.category.show');
+        return $this->view('panel.category.show');
     }
 
     public function edit($id)
@@ -41,7 +41,7 @@ class Category extends Controller
     {
         $category = new CategoryModel();
         $category->update($id, $_POST);
-        return $this->redirect('panel/category');
+        return $this->redirect('category');
     }
 
     public function destroy($id)
