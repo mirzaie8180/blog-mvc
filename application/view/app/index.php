@@ -1,39 +1,16 @@
-<?php $this->include("app.layouts.header"); ?>
+<?php $this->include("app.layouts.header", ['categories' => $categories]); ?>
 
-    <section class="container my-5">
-        <!-- Example row of columns -->
-        <section class="row">
+<section class="container my-5">
+    <!-- Example row of columns -->
+    <section class="row">
+        <?php foreach ($articles as $article) { ?>
             <section class="col-md-4">
-                <h2>Heading</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p><a class="btn btn-primary" href="detail.html" role="button">View details »</a></p>
+                <h2><?= $article['title']; ?></h2>
+                <p><?= substr($article['body'], 0, 120);  ?></p>
+                <p><a class="btn btn-primary" href="<?= $this->url('home/show/' . $article['id']); ?>" role="button">View details »</a></p>
             </section>
-            <section class="col-md-4">
-                <h2>Heading</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p><a class="btn btn-primary" href="detail.html" role="button">View details »</a></p>
-            </section>
-            <section class="col-md-4">
-                <h2>Heading</h2>
-                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                <p><a class="btn btn-primary" href="detail.html" role="button">View details »</a></p>
-            </section>
-            <section class="col-md-4">
-                <h2>Heading</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p><a class="btn btn-primary" href="detail.html" role="button">View details »</a></p>
-            </section>
-            <section class="col-md-4">
-                <h2>Heading</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p><a class="btn btn-primary" href="detail.html" role="button">View details »</a></p>
-            </section>
-            <section class="col-md-4">
-                <h2>Heading</h2>
-                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                <p><a class="btn btn-primary" href="detail.html" role="button">View details »</a></p>
-            </section>
-        </section>
+        <?php } ?>
     </section>
+</section>
 
-    <?php $this->include("app.layouts.footer"); ?>
+<?php $this->include("app.layouts.footer"); ?>

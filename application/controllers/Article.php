@@ -43,7 +43,7 @@ class Article extends Controller
 
     public function update($id)
     { 
-
+        var_dump('hi');
         $article = new ArticleModel();
         $article->update($id, $_POST);
         return $this->redirect('article');
