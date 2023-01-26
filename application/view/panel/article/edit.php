@@ -1,6 +1,6 @@
 <?php $this->include("panel.layouts.header"); ?>
 
-<form action="<?php $this->url('article/update/'.$article['id']); ?>" method="post">
+<form action="<?php $this->url('article/update/' . $article['id']); ?>" method="post">
     <section class="form-group">
         <label for="title">Title</label>
         <input type="text" class="form-control" name="title" id="title" value="<?php echo $article['title']; ?>" placeholder="title ...">
@@ -8,8 +8,8 @@
     <section class="form-group">
         <label for="cat_id">Category</label>
         <select class="form-control" id="cat_id" name="cat_id">
-        <?php foreach ($categories as $category) { ?>
-            <option value="<?php echo $category['id'] ?>" <?php if($article['cat_id'] == $category['id']) echo 'selected'; ?>><?php echo $category['name']; ?></option>
+            <?php foreach ($categories as $category) { ?>
+                <option value="<?php echo $category['id'] ?>" <?php if ($article['cat_id'] == $category['id']) echo 'selected'; ?>><?php echo $category['name']; ?></option>
             <?php } ?>
         </select>
     </section>

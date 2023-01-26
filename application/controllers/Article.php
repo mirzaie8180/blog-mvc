@@ -23,17 +23,18 @@ class Article extends Controller
     }
 
     public function store()
-    { 
+    {
         $article = new ArticleModel();
         $article->insert($_POST);
         return $this->redirect('article');
     }
 
     public function show($id)
-    { }
+    {
+    }
 
     public function edit($id)
-    { 
+    {
         $category = new Category();
         $categories = $category->all();
         $ob_article = new ArticleModel();
@@ -42,7 +43,7 @@ class Article extends Controller
     }
 
     public function update($id)
-    { 
+    {
         var_dump('hi');
         $article = new ArticleModel();
         $article->update($id, $_POST);
@@ -50,7 +51,7 @@ class Article extends Controller
     }
 
     public function destroy($id)
-    { 
+    {
         $article = new ArticleModel();
         $article->delete($id);
         return $this->back();

@@ -12,7 +12,7 @@
 
             <section class="col-md-4">
                 <h2><?= $article['title'] ?></h2>
-                <p><?= substr($article['body'] , 0,120)  ?></p>
+                <p><?= substr($article['body'], 0, 120)  ?></p>
                 <p><a class="btn btn-primary" href="<?= $this->url('home/show/' . $article['id']); ?>" role="button">View details »</a></p>
             </section>
 

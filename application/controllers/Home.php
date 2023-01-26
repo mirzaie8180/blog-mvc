@@ -6,7 +6,8 @@ use Application\Model\Category;
 use Application\Model\Article;
 
 
-class Home extends Controller{
+class Home extends Controller
+{
 
 
     public function index()
@@ -15,7 +16,7 @@ class Home extends Controller{
         $categories = $category->all();
         $article = new Article();
         $articles = $article->all();
-        return $this->View('app.index' , compact('categories','articles'));
+        return $this->View('app.index', compact('categories', 'articles'));
     }
 
     public function category($id)
@@ -26,7 +27,7 @@ class Home extends Controller{
         $category = $ob_category->find($id);
         $ob_category = new category();
         $articles = $ob_category->articles($id);
-        return $this->View('app.category' , compact('categories','articles','category'));
+        return $this->View('app.category', compact('categories', 'articles', 'category'));
     }
 
     public function show($id)
@@ -35,7 +36,6 @@ class Home extends Controller{
         $categories = $category->all();
         $article = new Article();
         $article = $article->find($id);
-        return $this->view('app.show' , compact('categories' , 'article'));
+        return $this->view('app.show', compact('categories', 'article'));
     }
-
 }
