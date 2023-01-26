@@ -13,7 +13,7 @@ class Model
 
   public function __construct()
   {
-    if (!isset($connection)) {
+    if (!isset($this->connection)) {
       global $dbHost, $dbName, $dbUsername, $dbPassword;
       $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8");
       try {
